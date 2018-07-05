@@ -3,7 +3,10 @@ var express = require('express');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 //ルート設定
-var router = require('./routes/api/v1/');
+var toolRouter = require('./routes/api/v1/tool/auth');
+//未作成
+//var arRouter = require('/routes/api/v1/ar');
+
 var port = process.env.PORT || 3000; // port番号を指定
 
 var app  = express();
@@ -64,7 +67,7 @@ passport.deserializeUser(function(username, done) {
 //body-parserの設定
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use('/air/api/v1/tool/auth/', router);
+app.use('/air/api/v1/tool/auth/', toolRouter);
 
 
 

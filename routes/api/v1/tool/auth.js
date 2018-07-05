@@ -4,7 +4,7 @@ var passport = require('passport');
 
 //test
 router.get('/', function(req, res){
-    res.json({"message":"Azure test"})
+    res.json({"message":"Azure test!!"})
 })
 
 //ログイン認証
